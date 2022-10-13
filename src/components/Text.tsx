@@ -19,7 +19,7 @@ export function Text({ size = 'md', children, asChild }: TextProps) {
         'text-xl': size === 'lg'
       })}>
 
-    {children}
+      {children}
     </Comp>
   )
 }

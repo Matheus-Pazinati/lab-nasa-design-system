@@ -6,6 +6,7 @@ export default {
   component: Text,
   args: {
     children: 'Text',
+    size: 'md',
   }
 } as Meta<TextProps>
 
@@ -22,5 +23,13 @@ export const Small: StoryObj<TextProps> = {
 export const Large: StoryObj<TextProps> = {
   args: {
     size: 'lg'
+  }
+}
+
+export const CustomComponent: StoryObj<TextProps> = {
+  args: {
+    size: 'md',
+    asChild: true,
+    children: <p>Paragraph Test</p>
   }
 }

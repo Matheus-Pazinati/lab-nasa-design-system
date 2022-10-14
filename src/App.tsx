@@ -40,6 +40,14 @@ export function App() {
         </label>
         <Button type='submit'>Ao infinito e além</Button>
       </form>
+      <footer className='mt-10 flex flex-col gap-3 items-center'>
+        <Text asChild size='sm' className='text-gray-300 underline hover:text-gray-200'>
+          <a href="">Esqueceu sua senha?</a>
+        </Text>
+        <Text asChild size='sm' className='text-gray-300 underline hover:text-gray-200'>
+          <a href="">Não possui uma conta? Crie uma agora!</a>
+        </Text>
+      </footer>
     </div>
   )
 }

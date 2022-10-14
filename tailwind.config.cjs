@@ -13,6 +13,10 @@ module.exports = {
       '2xl': 32
     },
 
+    backgroundImage: {
+      linear: 'linear-gradient(89.7deg, rgba(15, 58, 151, 0.85) 0.27%, #1E1E1E 54.15%);',
+    },
+
     colors: {
 
       transparent: 'transparent',

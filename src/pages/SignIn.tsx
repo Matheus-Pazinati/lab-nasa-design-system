@@ -5,8 +5,16 @@ import { Heading } from "../components/Heading";
 import { Logo } from "../components/Logo";
 import { TextInput } from "../components/TextInput";
 import { Text } from '../components/Text'
+import { FormEvent, useState } from "react";
 
 export function SignIn() {
+
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false)
+
+  function handleSignInSubmit(event: FormEvent) {
+    event.preventDefault()
+    setIsUserSignedIn(true)
+  }
   return (
     <div className='w-full h-full py-6 bg-linear flex flex-col items-center justify-center'>
       <header className='flex flex-col items-center'>
@@ -14,7 +22,8 @@ export function SignIn() {
         <Heading size='lg'>NASA Lab</Heading>
         <Text size="lg" className='text-gray-300 mt-1'>Faça login e explore o espaço!</Text>
       </header>
-      <form className='w-full max-w-sm mt-10 flex flex-col gap-5'>
+      <form onSubmit={handleSignInSubmit} className='w-full max-w-sm mt-10 flex flex-col gap-5'>
+        {isUserSignedIn && <Text>Login realizado!</Text>}
         <label htmlFor="email" className='flex flex-col gap-3'>
           <Text size='md' className='font-bold'>Seu endereço de e-mail</Text>
           <TextInput.Root>

@@ -16,6 +16,9 @@ module.exports = {
   "features": {
     "storyStoreV7": true
   },
+  "staticDirs": [
+    "../public"
+  ],
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/lab-nasa-design-system/'

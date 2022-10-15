@@ -7,14 +7,23 @@ import { TextInput } from "../components/TextInput";
 import { Text } from '../components/Text'
 import { FormEvent, useState } from "react";
 
+import axios from 'axios'
+
 export function SignIn() {
 
   const [isUserSignedIn, setIsUserSignedIn] = useState(false)
 
-  function handleSignInSubmit(event: FormEvent) {
+  async function handleSignInSubmit(event: FormEvent) {
     event.preventDefault()
+
+   await axios.post('/sessions', {
+      email: 'pedrohenrique@gmail.com',
+      password: '12345678',
+    })
+
     setIsUserSignedIn(true)
   }
+  
   return (
     <div className='w-full h-full py-6 bg-linear flex flex-col items-center justify-center'>
       <header className='flex flex-col items-center'>

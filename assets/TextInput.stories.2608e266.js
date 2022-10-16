@@ -1,0 +1,2 @@
+import{T as t,E as o}from"./TextInput.f7cfacd1.js";import{j as e}from"./jsx-runtime.30ccaf03.js";import"./index.3ae91251.js";import"./iframe.370677dc.js";import"./IconBase.esm.73db6c8d.js";import"./index.module.fbcd2f3b.js";const i={title:"Components/TextInput",component:t.Root,args:{children:[e(t.Icon,{children:e(o,{})}),e(t.Input,{placeholder:"Input placeholder"})]},argTypes:{children:{control:{disable:!0}}}},m={},c=["Default"];export{m as Default,c as __namedExportsOrder,i as default};
+//# sourceMappingURL=TextInput.stories.2608e266.js.map
